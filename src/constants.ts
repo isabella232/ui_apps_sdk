@@ -8,10 +8,12 @@ export enum UiAppFeatureType {
     DASHBOARD_COG_MENU = 'dashboard_cog_menu',
     DASHBOARD_CUSTOM_WIDGET = 'dashboard_custom_widget',
     DASHBOARD_PAGE_CONTEXT = 'dashboard_page_context',
+    DASHBOARD_CONTEXT_MENU = 'dashboard_context_menu',
     APP_ROUTING = 'app_routing'
 }
 
 export enum UiAppEventToSubscribeType {
+    DASHBOARD_CONTEXT_MENU = 'dashboard_context_menu',
     DASHBOARD_COG_MENU_CONTEXT = 'dashboard_cog_menu_context',
     DASHBOARD_TIMEFRAME_CHANGE = 'dashboard_timeframe_change',
     DASHBOARD_TEMPLATE_VAR_CHANGE = 'dashboard_template_var_change',

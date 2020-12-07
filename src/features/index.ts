@@ -8,6 +8,16 @@ import { FeatureManager } from './featureManager';
 
 export type { FeatureManager } from './featureManager';
 
+class DashboardContextMenuManager extends FeatureManager {
+    type = UiAppFeatureType.DASHBOARD_CONTEXT_MENU;
+    eventsToSubscribe = [UiAppEventToSubscribeType.DASHBOARD_CONTEXT_MENU];
+    eventsToTrigger = [];
+
+    getAdditionalClientMethods() {
+        return {};
+    }
+}
+
 class DashboardCogMenuManager extends FeatureManager {
     type = UiAppFeatureType.DASHBOARD_COG_MENU;
     eventsToSubscribe = [UiAppEventToSubscribeType.DASHBOARD_COG_MENU_CONTEXT];
@@ -46,6 +56,7 @@ class DashboardCustomWidgetManager extends FeatureManager {
 }
 
 export const featureManagers = [
+    DashboardContextMenuManager,
     DashboardCogMenuManager,
     AppRoutingManager,
     DashboardCustomWidgetManager
